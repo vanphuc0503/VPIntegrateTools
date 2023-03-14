@@ -8,7 +8,7 @@ pluginManagement {
 //        credentials.password = "..."
 //    }
 
-//    includeBuild("gradle/plugins")
+    includeBuild("gradle/plugins")
 }
 
 dependencyResolutionManagement {
