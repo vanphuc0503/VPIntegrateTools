@@ -11,18 +11,6 @@ tasks.withType<JavaCompile>().configureEach {
     options.encoding = "UTF-8"
 }
 
-tasks.named<JavaCompile>("compileJava") {
-
-}
-
-tasks.compileTestJava {
-
-}
-
 tasks.test {
-
-}
-
-tasks.javadoc {
 
 }
