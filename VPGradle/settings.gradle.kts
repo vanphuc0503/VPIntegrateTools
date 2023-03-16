@@ -20,7 +20,7 @@ dependencyResolutionManagement {
 //    }
 
 //    includeBuild("../my-other-project")
-//    includeBuild("gradle/platform") // platform project option 1
+    includeBuild("gradle/platform") // platform project option 1
 }
 
 rootProject.name = "VPGradle"

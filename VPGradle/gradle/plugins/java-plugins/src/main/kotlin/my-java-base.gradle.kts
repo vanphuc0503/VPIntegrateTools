@@ -4,6 +4,10 @@ plugins {
 //    id("com.autonomousapps.dependency-analysis")
 }
 
+dependencies.components {
+    withModule<Slf4jSimpleRule>("org.slf4j:slf4j-simple")
+}
+
 java {
     toolchain.languageVersion.set(JavaLanguageVersion.of(11))
 }
