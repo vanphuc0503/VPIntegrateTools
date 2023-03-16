@@ -5,5 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/../../../../../gradle/plugins/java-plugins/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../../../gradle/plugins/java-plugins/src/main/kotlin" isTestSource="false" />
     </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
