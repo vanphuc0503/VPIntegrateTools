@@ -3,9 +3,11 @@ plugins {
 }
 
 dependencies {
+    implementation(platform("com.example:platform"))
+
     implementation(project(":data-model"))
-    implementation("org.apache.commons:commons-lang3:3.12.0")
-    implementation("org.slf4j:slf4j-api:1.7.36")
+    implementation("org.apache.commons:commons-lang3")
+    implementation("org.slf4j:slf4j-api")
 
 //    api("") <-- dependency is transitively visible as compilation
 //    runtimeOnly("group:name") <-- only at runtime
