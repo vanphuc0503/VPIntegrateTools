@@ -7,7 +7,7 @@ application {
 }
 
 dependencies {
-//    implementation(platform("com.example:platform"))
+    implementation(platform("com.example:platform"))
 
     implementation(project(":data-model"))
     implementation(project(":business-logic"))
