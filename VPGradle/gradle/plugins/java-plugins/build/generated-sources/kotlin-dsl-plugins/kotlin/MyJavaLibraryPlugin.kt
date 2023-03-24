@@ -1,5 +1,5 @@
 /**
- * Precompiled [my-java-library.gradle.kts][My_java_library_gradle] script plugin.
+ * Precompiled [my-java-library.gradle][My_java_library_gradle] script plugin.
  *
  * @see My_java_library_gradle
  */

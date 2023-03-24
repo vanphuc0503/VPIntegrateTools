@@ -1,5 +1,5 @@
 /**
- * Precompiled [my-java-base.gradle.kts][My_java_base_gradle] script plugin.
+ * Precompiled [my-java-base.gradle][My_java_base_gradle] script plugin.
  *
  * @see My_java_base_gradle
  */

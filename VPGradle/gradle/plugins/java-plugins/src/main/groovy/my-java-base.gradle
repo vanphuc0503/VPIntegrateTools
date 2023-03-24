@@ -1,0 +1,55 @@
+plugins {
+    id("java")
+    id("com.diffplug.spotless")
+//    id("com.autonomousapps.dependency-analysis")
+}
+
+/*sourceSets.main {
+//    java.setSrcDirs(listOf(layout.projectDirectory.dir("sources")))
+}
+
+sourceSets.test*/
+
+tasks.register("integrationTest", Test) {
+    testClassesDirs = sourceSets["integrationTest"].output.classesDirs
+    classpath = sourceSets["integrationTest"].runtimeClasspath
+
+    useJUnitPlatform()
+}
+
+sourceSets.create("integrationTest")
+
+dependencies.components {
+    withModule("org.slf4j:slf4j-simple", Slf4jSimpleRule)
+}
+
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(11))
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = "UTF-8"
+}
+
+tasks.named("test") {
+    useJUnitPlatform {
+        excludeTags("slow")
+    }
+
+    maxParallelForks = 4
+
+    maxHeapSize = "1g"
+}
+
+tasks.register("testSlow", Test) {
+    testClassesDirs = sourceSets.test.output.classesDirs
+    classpath = sourceSets.test.runtimeClasspath
+
+    useJUnitPlatform {
+        includeTags("slow")
+    }
+}
+
+tasks.named("check") {
+    dependsOn(tasks.named("testSlow"))
+}

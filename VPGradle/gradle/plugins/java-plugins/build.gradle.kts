@@ -1,5 +1,6 @@
 plugins {
-    `kotlin-dsl`//  !  id("kotlin-dsl")
+    id("groovy-gradle-plugin")
+//    `kotlin-dsl`//  !  id("kotlin-dsl")
 }
 
 dependencies {

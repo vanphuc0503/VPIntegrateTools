@@ -3,7 +3,7 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$/../../../../../gradle/plugins/java-plugins/src/main">
       <sourceFolder url="file://$MODULE_DIR$/../../../../../gradle/plugins/java-plugins/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../../../gradle/plugins/java-plugins/src/main/kotlin" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../../gradle/plugins/java-plugins/src/main/groovy" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
