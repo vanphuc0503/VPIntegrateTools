@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/VPGradle.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/VPGradle.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/business-logic/VPGradle.business-logic.integrationTest.iml" filepath="$PROJECT_DIR$/.idea/modules/business-logic/VPGradle.business-logic.integrationTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/business-logic/VPGradle.business-logic.main.iml" filepath="$PROJECT_DIR$/.idea/modules/business-logic/VPGradle.business-logic.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle/plugins/java-plugins/plugins.java-plugins.main.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle/plugins/java-plugins/plugins.java-plugins.main.iml" />
     </modules>

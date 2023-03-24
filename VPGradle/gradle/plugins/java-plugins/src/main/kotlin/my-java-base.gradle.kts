@@ -4,11 +4,18 @@ plugins {
 //    id("com.autonomousapps.dependency-analysis")
 }
 
-sourceSets.main {
+/*sourceSets.main {
 //    java.setSrcDirs(listOf(layout.projectDirectory.dir("sources")))
 }
 
-sourceSets.test
+sourceSets.test*/
+
+tasks.register<Test>("integrationTest") {
+    testClassesDirs = sourceSets["integrationTest"].output.classesDirs
+    classpath = sourceSets["integrationTest"].runtimeClasspath
+
+    useJUnitPlatform()
+}
 
 sourceSets.create("integrationTest")
 
@@ -25,5 +32,24 @@ tasks.withType<JavaCompile>().configureEach {
 }
 
 tasks.test {
+    useJUnitPlatform {
+        excludeTags("slow")
+    }
 
+    maxParallelForks = 4
+
+    maxHeapSize = "1g"
+}
+
+tasks.register<Test>("testSlow") {
+    testClassesDirs = sourceSets.test.get().output.classesDirs
+    classpath = sourceSets.test.get().runtimeClasspath
+
+    useJUnitPlatform {
+        includeTags("slow")
+    }
+}
+
+tasks.check {
+    dependsOn(tasks.named("testSlow"))
 }

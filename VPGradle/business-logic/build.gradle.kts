@@ -4,6 +4,7 @@ plugins {
 
 dependencies {
     implementation(platform("com.example:platform"))
+    integrationTestImplementation(platform("com.example:platform"))
 
     implementation(project(":data-model"))
     implementation(libs.commons.lang)
@@ -11,6 +12,10 @@ dependencies {
 
     testImplementation("org.junit.jupiter:junit-jupiter-api")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+
+    integrationTestImplementation("org.junit.jupiter:junit-jupiter-api")
+    integrationTestRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+//    integrationTestImplementation("...")
 
 //    integrationTestImplementation("")
 
